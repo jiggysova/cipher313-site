@@ -121,6 +121,18 @@ h1 {
   background:var(--accent);
 }
 
+@media (max-width: 768px){
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+.hero .grid {
+  grid-template-columns: 1fr; /* stack hero text & card*/
+}
+h1 { font-size: 1.8rem;}
+}
+
+
 /* SECTIONS */
 section { padding:50px 0; }
 .kicker {
@@ -138,9 +150,9 @@ h2 {
 
 /* CARDS */
 .cards {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:18px;
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
 }
 .card {
   border:1px solid var(--graphite-700);
