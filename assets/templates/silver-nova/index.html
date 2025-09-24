@@ -2,21 +2,217 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Silver Nova Template</title>
+  <title>Silver Nova Ink — Tattoo Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Silver Nova Ink - Urban, clean tattoo studio specializing in custom sleeves, blackwork, fine line and realism. Book your session today.">
   <style>
-    body { font-family: sans-serif; background:#0b0b0c; color:#e7e7ea; margin:0; padding:0; }
-    header, footer { background:#1a1d22; padding:20px; text-align:center; }
-    h1 { color:#fff; }
-    section { padding:40px; text-align:center; }
-    .cta { background:#9aa0aa; padding:12px 24px; border-radius:8px; color:#000; text-decoration:none; font-weight:bold; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0b0b0c;
+      color: #f5f5f5;
+    }
+    header {
+      background: #1a1d22;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #9aa0aa;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.6rem;
+      letter-spacing: 2px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.1rem;
+      color: #9aa0aa;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero {
+      background: url("images/hero-studio.jpg") no-repeat center center/cover;
+      padding: 100px 20px;
+      color: #fff;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.6);
+    }
+    .hero h2, .hero p, .hero a {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .hero .cta {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #e0e0e0;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 25px;
+      transition: 0.3s;
+    }
+    .hero .cta:hover {
+      background: #fff;
+      transform: scale(1.05);
+    }
+
+    /* Reusable CTA button style */
+    .cta {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #e0e0e0;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 25px;
+      transition: 0.3s;
+    }
+    .cta:hover {
+      background: #fff;
+      transform: scale(1.05);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .card {
+      background: #1f2329;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      object-fit: cover;
+      height: 200px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      height: 200px;
+    }
+    .testimonials {
+      background: #1a1d22;
+      border-top: 2px solid #9aa0aa;
+      border-bottom: 2px solid #9aa0aa;
+      padding: 60px 20px;
+    }
+    .quote {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-style: italic;
+      color: #ccc;
+    }
+    footer {
+      background: #1a1d22;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 2px solid #9aa0aa;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #9aa0aa;
+    }
+    /* Mobile tweaks */
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.8rem; }
+      .hero { padding: 70px 16px; }
+      .hero h2 { font-size: 1.6rem; }
+      .hero p { font-size: 1rem; }
+      .services, .gallery {
+        grid-template-columns: 1fr; /* stack cards/images on phones */
+       }
+      .gallery img { height: 150px; }
+    }
   </style>
 </head>
 <body>
-  <header><h1>Silver Nova</h1></header>
-  <section>
-    <p>SaaS/Startup landing page design. Fast, clean, conversion-first.</p>
-    <a href="#" class="cta">Get Started</a>
+  <header>
+    <h1>Silver Nova Ink</h1>
+    <p>Urban. Clean. Personalized Art</p>
+  </header>
+
+  <section class="hero">
+    <h2>Quality Ink, Bold Statements</h2>
+    <p>Every tattoo tells a story. Let us bring yours to life.</p>
+    <a href="testimonials" class="cta">Book Your Session</a>
   </section>
-  <footer>© Silver Nova Demo</footer>
+
+  <section>
+    <h2>Specialties</h2>
+    <div class="services">
+      <div class="card">
+        <img loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy" src="images/service-sleeve.jpg" alt="Custom Sleeve Tattoo">
+        <h3>Custom Sleeve Art</h3>
+        <p>Designed to fit your vision: bold colors, flowing lines, ink that speaks louder than words.</p>
+      </div>
+      <div class="card">
+        <img loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy" src="images/service-tools.jpg" alt="Tattoo Artist at Work">
+        <h3>Fine Line & Detail</h3>
+        <p>Precision work, minimalist designs—small patches that make big impact.</p>
+      </div>
+      <div class="card">
+        <img loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy" src="images/service-portrait.jpg" alt="Portrait Style Tattoo">
+        <h3>Portraits & Realism</h3>
+        <p>Immortalize moments and people with shading that pops and tones that last.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy" src="images/gallery-sleeve.jpg" alt="Tattoo Sleeve Work">
+      <img loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy" src="images/gallery-work.jpg" alt="Tattoo Studio Work">
+      <img loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy" src="images/service-tools.jpg" alt="Tattoo Tools Prep">
+      <img loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy" src="images/service-portrait.jpg" alt="Portrait Tattoo">
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <p class="quote">“Getting inked here feels like stepping into art. The precision, the vibe, everything is top notch.”</p>
+    <p class="quote">“They took my idea, brought it to life with boldness and clarity. Silver Nova Ink delivers.”</p>
+  </section>
+
+  <p><a href="../silver-nova.zip" download class="cta">Download This Template</a></p>
+
+  <footer>
+    <p>© 2025 Silver Nova Ink. Demo site by Cipher 313.</p>
+  </footer>
 </body>
 </html>

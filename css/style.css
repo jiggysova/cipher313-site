@@ -121,6 +121,11 @@ h1 {
   background:var(--accent);
 }
 
+.hero {
+  background: url("images/hero-studio.jpg") no-repeat center center/cover;
+}
+
+
 @media (max-width: 768px){
   .nav {
     flex-direction: column;
